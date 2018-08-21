@@ -69,6 +69,17 @@ app.get('/about', (req, res) => {
     });
 });
 
+//  Add another new route
+app.get('/projects', (req, res) => {
+        res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        welcomeMessage: 'Portfolio page here'
+       
+    });
+});
+
+
+
 //  Challenge - Add a new route Http handler /bad to send back json with error/Message
 app.get('/bad', (req, res) => {
     res.send({
